@@ -33,10 +33,10 @@
 
 # 📖 Leaderboard <a name="about-project"></a>
 
-**Leaderboard** 
-In this activity you will set up a JavaScript project for the Leaderboard list app, using webpack and ES6 features, notably modules. You should develop a first working version of the app following a wireframe, but without styling - just focus on functionality. In following activities, you will consume the Leaderboard API using JavaScript async and await and add some styling.
-is a repository.The goal is to Create, interactive list funcionality, and we use JEST to test.
+**Leaderboard**
+Is an Application where you can Add a new leaderboard person with its score.
 
+In this Repository I did set up a JavaScript project for the Leaderboard list app, using webpack and ES6 features, notably modules. 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -55,13 +55,14 @@ is a repository.The goal is to Create, interactive list funcionality, and we use
 
 - **Demo of setup a front-end project using webpack**
 - **Demo of Gitflow**
+- **Demo of Asynchronous code**
 - **Demo of Linters**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://graciano1997.github.io/todo-list/dist/)
+- [Live Demo Link](https://graciano1997.github.io/leaderboard/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GETTING STARTED -->
@@ -82,7 +83,7 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-git clone https://github.com/Graciano1997/todo-list.git
+git clone https://github.com/Graciano1997/leaderboard.git
 
 ### Install
 
@@ -140,10 +141,6 @@ npm run build
 
 - GitHub: [@Graciano1997](https://github.com/Graciano1997)
 
-👤 Faiz Mohammad
-
-- GitHub: [@the-faizMohamm](https://github.com/the-faizMohamm)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -161,7 +158,7 @@ npm run build
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Graciano1997/todo-list/issues).
+Feel free to check the [issues page](https://github.com/Graciano1997/leaderboard/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
