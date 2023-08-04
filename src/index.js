@@ -11,4 +11,4 @@ refresAllListener();
 const myLogo = new Image();
 myLogo.src=logo;
 myLogo.classList.add('logo');
-document.querySelector('.logoContainer').append(myLogo);
+document.querySelector('.logoLink').append(myLogo);
