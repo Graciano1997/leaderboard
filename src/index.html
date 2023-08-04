@@ -3,28 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/src/icon.ico" type="image/x-icon">
     <title>LeaderBoard</title>
 </head>
 
 <body class="container">
     <header>
-        <h1> LeaderBoard</h1>
+        <div>
+            <a href="#" class="logoContainer"></a>
+         </div>
+        <h1 class="mainTitle">Fighters LeaderBoard</h1>
     </header>
 
     <main class="main">
         <section class="leaderBoardContainer">
             <div class="leadBoardHeader">
                 <div class="refreshButton">
-                    <h2>Recent scores</h2>
+                    <h2 class="scoreHeader">Recent scores</h2>
                     <button id="btnRefres">Refresh</button>
                 </div>
                 <div>
-                    <h2>Add your score</h2>
+                    <h2 class="addScore">Add your score</h2>
                 </div>
             </div>
 
             <div class="leaderBoardBody">
                 <section class="displaySection">
+                    <h2 id="recenteScore">Recent Scores</h2>
                     <div class="listScoreContainer">
                         <ul class="list">
                         </ul>
@@ -35,11 +40,11 @@
                     <form class="formItem">
                         <div>
                             <label for="name">Your name</label>
-                            <input type="text" name="name" id="name" placeholder="Fighter's name">
+                            <input type="text" name="name" id="name" minlength="3" placeholder="Fighter's name" required>
                         </div>
                         <div>
                             <label for="score">Your Score</label>
-                            <input type="text" name="score" id="score" placeholder="Fighter's Score">
+                            <input type="number" name="score" id="score" min="0" placeholder="Fighter's Score" required>
                         </div>
                         <div class="submitContainer">
                             <button type="submit">Sumit</button>
@@ -49,6 +54,9 @@
             </div>
         </section>
     </main>
+    <footer>
+        <h4></h4>
+    </footer>
 </body>
 
 </html>
