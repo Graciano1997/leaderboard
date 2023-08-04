@@ -2,7 +2,7 @@
 
 <div align="center">
   
-  <h1><b>Leaderboard: setup project</b></h1>
+  <h1><b>Leaderboard: hit the API</b></h1>
 
 </div>
 
@@ -34,9 +34,8 @@
 # 📖 Leaderboard <a name="about-project"></a>
 
 **Leaderboard**
-Is an Application where you can Add a new leaderboard person with its score.
-
-In this Repository I did set up a JavaScript project for the Leaderboard list app, using webpack and ES6 features, notably modules. 
+Is an Application where you can Add a new leaderboard fighter with its score.
+this project consumes a API to store and read the Leaderboard data and organize the data respecting an  orde.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>

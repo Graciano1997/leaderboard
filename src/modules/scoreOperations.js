@@ -1,10 +1,11 @@
 import * as Variable from './globalvar.js';
-import listElementConstructor from './listConstructor.js';
 
-const addNewScore = (score) => {
-  const scoreDB = JSON.parse(localStorage.getItem('scores')) === null ? [] : JSON.parse(localStorage.getItem('scores'));
-  scoreDB.push(score);
-  localStorage.setItem('scores', JSON.stringify(scoreDB));
+const listElementConstructor = (score, even = null) => {
+  const li = document.createElement('li');
+  li.classList.add('item');
+  if (even !== null) { li.classList.add('even'); }
+  li.textContent = `${score.user} : ${score.score}`;
+  return li;
 };
 
 const cleanAll = () => {
@@ -13,10 +14,13 @@ const cleanAll = () => {
   }
 };
 
-const readScores = () => {
+const readScores = async () => {
   cleanAll();
-  const scoreDB = JSON.parse(localStorage.getItem('scores')) === null ? [] : JSON.parse(localStorage.getItem('scores'));
-  const scoreOrganized = scoreDB.sort((a, b) => b.number - a.number);
+  const response = await fetch(Variable.NarutoHeroesFightUrl);
+  const narutoHeroesFightScoreResponse = await response.json();
+  const narutoHeroesFightScore = narutoHeroesFightScoreResponse.result;
+  const scoreOrganized = narutoHeroesFightScore.sort((fA, fB) => (fB.score - fA.score));
+
   if (scoreOrganized !== null) {
     scoreOrganized.forEach((score, index) => {
       if (index % 2 === 0) {
@@ -28,20 +32,38 @@ const readScores = () => {
   }
 };
 
+const addNewScore = async (score) => {
+  await fetch(Variable.NarutoHeroesFightUrl, {
+    method: 'POST',
+    body: JSON.stringify(score),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then((response) => response.json());
+  await readScores();
+};
+
 const initializeScoreOperationsListener = () => {
   Variable.formSubmit.addEventListener('submit', (e) => {
     e.preventDefault();
-    const score = {
-      name: Variable.inputName.value,
-      number: Variable.inputScore.value,
+    const scoreObject = {
+      user: Variable.inputName.value,
+      score: Variable.inputScore.value,
     };
-    addNewScore(score);
-    readScores();
+    addNewScore(scoreObject);
+    Variable.formSubmit.reset();
   });
 };
 
-const initializeScoreReader = () => {
+const initializeScoreReader = async () => {
   window.addEventListener('DOMContentLoaded', readScores);
 };
 
-export { initializeScoreOperationsListener, initializeScoreReader };
+const refresAllListener = () => {
+  Variable.btnRefres.addEventListener('click', readScores);
+};
+
+export {
+  initializeScoreOperationsListener, readScores, initializeScoreReader, refresAllListener,
+};
