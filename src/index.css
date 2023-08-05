@@ -2,12 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 :root {
-  --main-color: #007bff;
-  --font-size: 16px;
   --font-primary: 'Lato', sans-serif;
   --font-secondary: 'Righteous', cursive;
-  ;
-
+  --orange: orange;
 }
 
 * {
@@ -61,7 +58,7 @@ opacity: 1;
   padding-left: 2%;
   font-size: 40px;
   font-weight: 400;
-  color:orange;
+  color: var(--orange);
   width: 80%;
   text-align: center;
   text-shadow: 10px 10px 10px 10px black;
