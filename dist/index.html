@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/src/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" >
     <title>LeaderBoard</title>
 <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
 
@@ -11,16 +13,22 @@
     <header>
         <div class="logoContainer">
             <a href="#" class="logoLink"></a>
-         </div>
+        </div>
         <h1 class="mainTitle">Fighters LeaderBoard</h1>
     </header>
+    <nav>
+        <ul>
+            <li id="newThema">Theme</li>
+            <li><a href="https://github.com/Graciano1997" target="_blank" rel="noopener">Author</a></li>
+        </ul>
+    </nav>
 
     <main class="main">
         <section class="leaderBoardContainer">
             <div class="leadBoardHeader">
                 <div class="refreshButton">
                     <h2 class="scoreHeader">Recent scores</h2>
-                    <button id="btnRefres">Refresh</button>
+                    <button id="btnRefres" type="button">Refresh</button>
                 </div>
                 <div>
                     <h2 class="addScore">Add your score</h2>
@@ -29,10 +37,10 @@
 
             <div class="leaderBoardBody">
                 <section class="displaySection">
-                   <div class="description">
-                    <h2 id="recenteScore">Recent Scores</h2>
-                    <button id="btnTheme">Theme</button>
-                </div> 
+                    <div class="description">
+                        <h2 id="recenteScore">Recent Scores</h2>
+                        <button id="btnTheme" type="button">Theme</button>
+                    </div>
                     <div class="listScoreContainer">
                         <ul class="list">
                         </ul>
@@ -43,7 +51,8 @@
                     <form class="formItem">
                         <div>
                             <label for="name">Your name</label>
-                            <input type="text" name="name" id="name" minlength="3" placeholder="Fighter's name" required>
+                            <input type="text" name="name" id="name" minlength="3" placeholder="Fighter's name"
+                                required>
                         </div>
                         <div>
                             <label for="score">Your Score</label>
@@ -58,7 +67,7 @@
         </section>
     </main>
     <footer>
-        <p> Developed with <span>&heartsuit;</span> by Graciano</p>
+        <p> Developed with <span class="heart">&heartsuit;</span> by Graciano <span id="lastName">Henrique</span></p>
     </footer>
 </body>
 

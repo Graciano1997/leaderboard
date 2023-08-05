@@ -6,6 +6,7 @@ const btnRefres = document.querySelector('#btnRefres');
 const btnTheme = document.querySelector('#btnTheme');
 const formSubmit = document.querySelector('.formItem');
 const bodyContainer = document.querySelector('.container');
+const desktopThema = document.querySelector('#newThema');
 
 export {
   listContainer,
@@ -15,5 +16,6 @@ export {
   NarutoHeroesFightUrl,
   btnRefres,
   bodyContainer,
-  btnTheme
+  btnTheme,
+  desktopThema,
 };

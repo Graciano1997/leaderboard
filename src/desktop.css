@@ -1,136 +1,165 @@
 @media (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url(./pictures/valeyofend.jpg);
+    background-repeat: repeat;
+    background-size: 100%;
+    height: 100%;
+  }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-   background: url(./pictures/valeyofend.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 100%; 
-}
+  nav {
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    opacity: 0.5;
+  }
 
-.mainTitle {
+  nav ul {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    color: white;
+    margin-right: 5%;
+    padding: 2%;
+  }
+
+  nav ul li {
+    list-style-type: none;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    opacity: 1;
+    font-size: 15px;
+  }
+
+  .mainTitle {
     font-size: 60px;
     text-align: left;
-}
+  }
 
+  .main {
+    display: flex;
+    justify-content: center;
+  }
 
+  .leaderBoardContainer {
+    margin-top: 3%;
+    display: grid;
+    grid-template-rows: 25px 80fr;
+    grid-template-columns: 1fr;
+    column-gap: 4%;
+    width: 80%;
+  }
 
-.main {
-  display: flex;
-  justify-content: center;
-}
+  .leadBoardHeader,
+  .leaderBoardBody {
+    column-gap: 8%;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+  }
 
-.leaderBoardContainer {
-  margin-top: 3%;
-  display: grid;
-  grid-template-rows: 25px 80fr;
-  grid-template-columns: 1fr;
-  column-gap: 4%;
-  width: 80%;
-}
+  .leadBoardHeader {
+    padding-bottom: 4%;
+  }
 
-.leadBoardHeader,
-.leaderBoardBody {
-  column-gap: 8%;
-  display: grid;
-  grid-template: 1fr / 1fr 1fr;
-}
-
-.leadBoardHeader {
- padding-bottom: 4%;
-}
-
-#btnRefres {
-
+  #btnRefres {
     align-self: flex-start;
+  }
 
-    }
+  .leaderBoardBody {
+    margin-top: 3%;
+    justify-items: flex-start;
+  }
 
-.leaderBoardBody {
-  margin-top: 3%;
-  justify-items: flex-start;
-}
+  .displaySection {
+    width: 100%;
+    height: 100%;
+  }
 
-.displaySection {
-  width: 100%;
-  height: 100%;
-}
+  .refreshButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-.refreshButton {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+  .listScoreContainer {
+    border: 2px solid black;
+    width: 100%;
+    height: 100%;
+  }
 
-.listScoreContainer {
-  border: 2px solid black;
-  width: 100%;
-  height: 100%;
-}
+  .list {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+  }
 
-.list {
-  display: flex;
-  flex-direction: column;
-  height: 90vh;
+  .list .item {
+    list-style-type: none;
+    margin-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
 
-}
+  .formSection {
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
+  }
 
-.list .item {
-  list-style-type: none;
-  margin-bottom: 1%;
-  padding-left: 1%;
-  padding-right: 1%;
-}
-
-
-.formSection {
-  display: flex;
-  flex-direction: column;
-  gap: 4%;
-}
-
-.formItem {
+  .formItem {
     padding-top: 2%;
-}
+  }
 
-.formItem div {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 8%;
-}
+  .formItem div {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 8%;
+  }
 
-.formItem div input {
-  border: 2px solid white;
+  .formItem div input {
+    border: 2px solid white;
+  }
 
-}
+  button {
+    border: transparent;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+  }
 
-button {
-  border: transparent;
-  padding-left: 1.5%;
-  padding-right: 1.5%;
-}
-
-button:hover {
+  button:hover {
     box-shadow: 2px 2px 0 0 rgb(249, 240, 240);
-}
+  }
 
-
-#btnTheme, #recenteScore {
+  #btnTheme,
+  #recenteScore {
     display: none;
-}
-.scoreHeader {
+  }
+
+  .scoreHeader {
     display: inline;
     color: white;
     font-size: 25pt;
-    font-family:  var(--font-secondary);
+    font-family: var(--font-secondary);
     text-shadow: 4px 4px 4px black;
-}
+  }
 
-#submitFight {
+  #submitFight {
     padding: 3%;
     font-family: var(--font-secondary);
-}
+  }
 
+  #lastName {
+    display: inline;
+    font-size: 20pt;
+  }
 }
