@@ -1,8 +1,9 @@
 <a name="readme-top"></a>
 
 <div align="center">
+<img src="./src/pictures/logo.png" width=70%>
   
-  <h1><b>Leaderboard: hit the API</b></h1>
+  <h1><b>Leaderboard</b></h1>
 
 </div>
 
@@ -173,7 +174,7 @@ If you like this project give ⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse
+I would like to thank **Microverse** and **Masashi Kishimoto**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -1,30 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/src/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" >
     <title>LeaderBoard</title>
 </head>
 
 <body class="container">
     <header>
-        <h1> LeaderBoard</h1>
+        <div class="logoContainer">
+            <a href="#" class="logoLink"></a>
+        </div>
+        <h1 class="mainTitle">Fighters LeaderBoard</h1>
     </header>
+    <nav>
+        <ul>
+            <li id="newThema">Theme</li>
+            <li><a href="https://github.com/Graciano1997" target="_blank" rel="noopener">Author</a></li>
+        </ul>
+    </nav>
 
     <main class="main">
         <section class="leaderBoardContainer">
             <div class="leadBoardHeader">
                 <div class="refreshButton">
-                    <h2>Recent scores</h2>
-                    <button id="btnRefres">Refresh</button>
+                    <h2 class="scoreHeader">Recent scores</h2>
+                    <button id="btnRefres" type="button">Refresh</button>
                 </div>
                 <div>
-                    <h2>Add your score</h2>
+                    <h2 class="addScore">Add your score</h2>
                 </div>
             </div>
 
             <div class="leaderBoardBody">
                 <section class="displaySection">
+                    <div class="description">
+                        <h2 id="recenteScore">Recent Scores</h2>
+                        <button id="btnTheme" type="button">Theme</button>
+                    </div>
                     <div class="listScoreContainer">
                         <ul class="list">
                         </ul>
@@ -35,20 +51,24 @@
                     <form class="formItem">
                         <div>
                             <label for="name">Your name</label>
-                            <input type="text" name="name" id="name" placeholder="Fighter's name">
+                            <input type="text" name="name" id="name" minlength="3" placeholder="Fighter's name"
+                                required>
                         </div>
                         <div>
                             <label for="score">Your Score</label>
-                            <input type="text" name="score" id="score" placeholder="Fighter's Score">
+                            <input type="number" name="score" id="score" min="0" placeholder="Fighter's Score" required>
                         </div>
                         <div class="submitContainer">
-                            <button type="submit">Sumit</button>
+                            <button type="submit" id="submitFight">Sumit</button>
                         </div>
                     </form>
                 </section>
             </div>
         </section>
     </main>
+    <footer>
+        <p> Developed with <span class="heart">&heartsuit;</span> by Graciano <span id="lastName">Henrique</span></p>
+    </footer>
 </body>
 
 </html>

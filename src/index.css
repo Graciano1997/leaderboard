@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+:root {
+  --font-primary: 'Lato', sans-serif;
+  --font-secondary: 'Righteous', cursive;
+  --orange: orange;
+}
 
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Lato', sans-serif;
   font-size: 12pt;
 }
 
@@ -13,11 +19,59 @@
   justify-content: center;
 }
 
-header h1 {
+header {
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  display: none;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -8%;
+  padding-top: 8%;
+}
+
+.logoLink {
+  text-align: center;
+  padding-top: -4%;
+}
+
+.logo {
+  text-align: center;
+  width: 40%;
+  height: 40%;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: all 4s;
+}
+
+.logo:hover {
+  opacity: 1;
+}
+
+.mainTitle {
   margin-top: 5%;
   padding-left: 2%;
-  font-size: 35pt;
-  font-weight: 900;
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--orange);
+  width: 80%;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 0, 3, 0.852);
+  opacity: 70%;
+  font-family: var(--font-secondary);
+  transition: all 2s;
+}
+
+.mainTitle:hover {
+  opacity: 100%;
 }
 
 h2 {
@@ -27,28 +81,19 @@ h2 {
 
 .main {
   display: flex;
-  justify-content: center;
+  flex-direction: column-reverse;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
 .leaderBoardContainer {
   margin-top: 3%;
-  display: grid;
-  grid-template-rows: 25px 80fr;
-  grid-template-columns: 1fr;
-  column-gap: 4%;
-  width: 80%;
-}
-
-.leadBoardHeader,
-.leaderBoardBody {
-  column-gap: 5%;
-  display: grid;
-  grid-template: 1fr / 1fr 1fr;
+  padding-bottom: 10%;
 }
 
 .leaderBoardBody {
-  margin-top: 3%;
-  justify-items: flex-start;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .displaySection {
@@ -58,29 +103,40 @@ h2 {
 
 .refreshButton {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
 }
 
 .listScoreContainer {
   border: 2px solid black;
   width: 100%;
   height: 100%;
+  border-radius: 15px;
+  background: rgba(248, 164, 8, 0.585);
+  backdrop-filter: blur(5px);
 }
 
 .list {
   display: flex;
   flex-direction: column;
+  margin: 4px;
+  border-radius: 4px;
+  padding-top: 2%;
+  height: 80vh;
+  overflow-y: scroll;
 }
 
 .list .item {
   list-style-type: none;
   margin-bottom: 1%;
-  padding-left: 1%;
-  padding-right: 1%;
+  padding: 2%;
+  font-weight: bolder;
+  font-size: 14pt;
 }
 
 .even {
   background: rgba(227, 221, 221, 0.948);
+  border-radius: 4px;
 }
 
 .formSection {
@@ -96,14 +152,29 @@ h2 {
 }
 
 .formItem div input {
-  border: 2px solid black;
+  border: 2px solid  rgb(248, 164, 8);
+  padding: 3%;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.527);
+  color: white;
+  font-size: 15pt;
 }
 
 button {
-  border: 2px solid black;
-  box-shadow: 2px 2px 0 0 black;
-  padding-left: 1.5%;
-  padding-right: 1.5%;
+  padding: 3%;
+  border-radius: 10px;
+  background: rgb(248, 164, 8);
+  color: black;
+  border: transparent;
+  transition: all 2s;
+}
+
+button:hover {
+  box-shadow: 4px 4px 4px 4px black;
+}
+
+#btnRefres {
+  align-self: flex-end;
 }
 
 .formItem .submitContainer {
@@ -112,5 +183,71 @@ button {
 }
 
 label {
+  display: none;
+}
+
+#recenteScore {
+  padding-bottom: 2%;
+  color: white;
+  font-size: 25pt;
+  font-family: var(--font-secondary);
+  text-shadow: 4px 4px 4px black;
+}
+
+.addScore {
+  padding-bottom: 2%;
+  color: white;
+  font-size: 20pt;
+  font-family: var(--font-secondary);
+  text-shadow: 4px 4px 4px black;
+}
+
+.scoreHeader {
+  display: none;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.3%;
+}
+
+#btnTheme {
+  background: rgb(231, 74, 6);
+  color: white;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+footer {
+  color: white;
+  font-size: 20pt;
+  text-align: center;
+  font-family: var(--font-secondary);
+}
+
+footer p {
+  padding-bottom: 2%;
+  font-size: 20pt;
+  transition: all 3s;
+}
+
+footer p:hover {
+  font-size: 35px;
+  padding-bottom: 3%;
+}
+
+.heart {
+  color: rgb(221, 20, 30);
+  font-size: 30px;
+  transition: all 3s;
+}
+
+.heart:hover {
+  font-size: 40px;
+  color: red;
+}
+
+#lastName {
   display: none;
 }
