@@ -1,7 +1,7 @@
-<center><img src="./src/pictures/logo.png" width=50%></center>
 <a name="readme-top"></a>
 
 <div align="center">
+<img src="./src/pictures/logo.png" width=70%>
   
   <h1><b>Leaderboard</b></h1>
 
