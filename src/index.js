@@ -1,4 +1,5 @@
 import './index.css';
+import './desktop.css';
 import logo from './pictures/logo.png';
 import { createNewGame } from './modules/apiControler.js';
 import { initializeScoreOperationsListener, initializeScoreReader, refresAllListener } from './modules/scoreOperations.js';
