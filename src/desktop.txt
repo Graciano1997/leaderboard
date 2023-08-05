@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Righteous&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 12pt;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background: url(./pictures/valeyofend.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100%; */
+}
+
+header h1 {
+  margin-top: 5%;
+  padding-left: 2%;
+  font-size: 40pt;
+  font-weight: 900;
+  font-family: 'Righteous', cursive;
+  color:orange;
+}
+
+h2 {
+  font-size: 20pt;
+  font-weight: 700;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.leaderBoardContainer {
+  margin-top: 3%;
+  display: grid;
+  grid-template-rows: 25px 80fr;
+  grid-template-columns: 1fr;
+  column-gap: 4%;
+  width: 80%;
+}
+
+.leadBoardHeader,
+.leaderBoardBody {
+  column-gap: 5%;
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+}
+
+.leaderBoardBody {
+  margin-top: 3%;
+  justify-items: flex-start;
+}
+
+.displaySection {
+  width: 100%;
+  height: 100%;
+}
+
+.refreshButton {
+  display: flex;
+  justify-content: space-between;
+}
+
+.listScoreContainer {
+  border: 2px solid black;
+  width: 100%;
+  height: 100%;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list .item {
+  list-style-type: none;
+  margin-bottom: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.even {
+  background: rgba(227, 221, 221, 0.948);
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 4%;
+}
+
+.formItem div {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 8%;
+}
+
+.formItem div input {
+  border: 2px solid black;
+}
+
+button {
+  border: 2px solid black;
+  box-shadow: 2px 2px 0 0 black;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+}
+
+.formItem .submitContainer {
+  display: flex;
+  align-items: end;
+}
+
+label {
+  display: none;
+}
