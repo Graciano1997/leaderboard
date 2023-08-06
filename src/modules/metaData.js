@@ -3,10 +3,10 @@ import icon from '../pictures/icon.ico';
 import logo from '../pictures/logo.png';
 
 const metaHeaders = () => {
-   const iconLink = document.createElement('link');
-   iconLink.href = icon;
-   iconLink.type = 'image/x-icon';
-   iconLink.rel = 'shortcut icon';
+  const iconLink = document.createElement('link');
+  iconLink.href = icon;
+  iconLink.type = 'image/x-icon';
+  iconLink.rel = 'shortcut icon';
   document.head.append(iconLink);
 };
 
