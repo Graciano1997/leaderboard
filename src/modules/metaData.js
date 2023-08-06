@@ -7,18 +7,6 @@ const metaHeaders = () => {
    iconLink.href = icon;
    iconLink.type = 'image/x-icon';
    iconLink.rel = 'shortcut icon';
-
-  // const metaTitle = document.createElement('meta');
-  // metaTitle.property = 'og:title';
-  // metaTitle.content = 'NARUTO LeadBoard Fighters';
-
-  // const metaUrl = document.createElement('meta');
-  // metaUrl.property = 'og:url';
-  // metaUrl.content = 'https://graciano1997.github.io/leaderboard/dist/';
-
-  // const metaImg = document.createElement('meta');
-  // metaImg.property = 'og:image';
-  // metaImg.content = '../pictures/NARUTOSAMA.jpg';
   document.head.append(iconLink);
 };
 
