@@ -7,6 +7,7 @@ const btnTheme = document.querySelector('#btnTheme');
 const formSubmit = document.querySelector('.formItem');
 const bodyContainer = document.querySelector('.container');
 const desktopThema = document.querySelector('#newThema');
+const logoContainer = document.querySelector('.logoLink');
 
 export {
   listContainer,
@@ -18,4 +19,5 @@ export {
   bodyContainer,
   btnTheme,
   desktopThema,
+  logoContainer,
 };
